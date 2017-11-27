@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIP3.Orders", "NIP3.Orders\NIP3.Orders.csproj", "{B7F0A3DE-8218-47BC-AFD3-7B25100F4A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIP3.Orders.Test", "NIP3.Orders.Test\NIP3.Orders.Test.csproj", "{20FE6A65-BADA-4517-9833-ED4878D5B10A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7F0A3DE-8218-47BC-AFD3-7B25100F4A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F0A3DE-8218-47BC-AFD3-7B25100F4A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F0A3DE-8218-47BC-AFD3-7B25100F4A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F0A3DE-8218-47BC-AFD3-7B25100F4A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FE6A65-BADA-4517-9833-ED4878D5B10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FE6A65-BADA-4517-9833-ED4878D5B10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FE6A65-BADA-4517-9833-ED4878D5B10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FE6A65-BADA-4517-9833-ED4878D5B10A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52DBE6D7-5CE9-4ECB-8348-A902839605AA}
+	EndGlobalSection
+EndGlobal

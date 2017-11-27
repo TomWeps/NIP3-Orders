@@ -1,0 +1,215 @@
+I, [2017-11-23T10:53:32.515052 #16420]  INFO -- : Cleared interactions for example "OrderControllerTest..ctor"
+I, [2017-11-23T10:53:33.656253 #16420]  INFO -- : Registered expected interaction POST /api/v1/shipment
+D, [2017-11-23T10:53:33.656253 #16420] DEBUG -- : {
+  "description": "a bad request from shipping order",
+  "providerState": "invalid shipment data",
+  "request": {
+    "method": "post",
+    "path": "/api/v1/shipment",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+    }
+  }
+}
+I, [2017-11-23T10:53:35.226148 #16420]  INFO -- : Received request POST /api/v1/shipment
+D, [2017-11-23T10:53:35.227147 #16420] DEBUG -- : {
+  "path": "/api/v1/shipment",
+  "query": "",
+  "method": "post",
+  "body": {
+    "name": "Jan Kowalski",
+    "address": "Akademicka 16",
+    "postalCode": "44-100",
+    "city": "Gliwice",
+    "countryCode": "PL",
+    "phoneNumber": "32 237 13 10"
+  },
+  "headers": {
+    "Content-Length": "168",
+    "Content-Type": "application/json; charset=utf-8",
+    "Accept": "application/json",
+    "Host": "localhost:9222",
+    "Expect": "100-continue",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-11-23T10:53:35.227147 #16420]  INFO -- : Found matching response for POST /api/v1/shipment
+D, [2017-11-23T10:53:35.227147 #16420] DEBUG -- : {
+  "status": 400,
+  "headers": {
+  }
+}
+I, [2017-11-23T10:53:35.272151 #16420]  INFO -- : Verifying - interactions matched for example "<CreateOrder_WithInvalidShipmentData_ShouldFail>d__6.MoveNext"
+I, [2017-11-23T10:53:35.285154 #16420]  INFO -- : Cleared interactions for example "OrderControllerTest..ctor"
+I, [2017-11-23T10:53:35.320166 #16420]  INFO -- : Registered expected interaction POST /api/v1/shipment
+D, [2017-11-23T10:53:35.320166 #16420] DEBUG -- : {
+  "description": "a request to shipping order",
+  "providerState": "valid shipment data",
+  "request": {
+    "method": "post",
+    "path": "/api/v1/shipment",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "name": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "Jan Kowalski",
+          "matcher": {"json_class":"Regexp","o":0,"s":".+"}
+        }
+      },
+      "address": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "Akademicka 16",
+          "matcher": {"json_class":"Regexp","o":0,"s":".+"}
+        }
+      },
+      "postalCode": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "44-100",
+          "matcher": {"json_class":"Regexp","o":0,"s":".+"}
+        }
+      },
+      "city": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "Gliwice",
+          "matcher": {"json_class":"Regexp","o":0,"s":".+"}
+        }
+      },
+      "countryCode": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "PL",
+          "matcher": {"json_class":"Regexp","o":0,"s":"[A-Z]{2}"}
+        }
+      },
+      "phoneNumber": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "32 237 13 10",
+          "matcher": {"json_class":"Regexp","o":0,"s":".+"}
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "confirmationNumber": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "XX-636446338738089968",
+          "matcher": {"json_class":"Regexp","o":0,"s":"XX-\\d{1,}"}
+        }
+      }
+    }
+  }
+}
+I, [2017-11-23T10:53:35.629196 #16420]  INFO -- : Received request POST /api/v1/shipment
+D, [2017-11-23T10:53:35.630195 #16420] DEBUG -- : {
+  "path": "/api/v1/shipment",
+  "query": "",
+  "method": "post",
+  "body": {
+    "name": "Jan Kowalski",
+    "address": "Akademicka 16",
+    "postalCode": "44-100",
+    "city": "Gliwice",
+    "countryCode": "PL",
+    "phoneNumber": "32 237 13 10"
+  },
+  "headers": {
+    "Content-Length": "168",
+    "Content-Type": "application/json; charset=utf-8",
+    "Accept": "application/json",
+    "Host": "localhost:9222",
+    "Expect": "100-continue",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-11-23T10:53:35.630195 #16420]  INFO -- : Found matching response for POST /api/v1/shipment
+D, [2017-11-23T10:53:35.630195 #16420] DEBUG -- : {
+  "status": 201,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "confirmationNumber": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "XX-636446338738089968",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "XX-\\d{1,}"
+        }
+      }
+    }
+  }
+}
+I, [2017-11-23T10:53:35.735920 #16420]  INFO -- : Verifying - interactions matched for example "<CreateOrder_WithValidData_ShouldReturnConfirmation>d__5.MoveNext"
+I, [2017-11-23T10:53:35.748923 #16420]  INFO -- : Cleared interactions for example "OrderControllerTest..ctor"
+I, [2017-11-23T10:53:35.761919 #16420]  INFO -- : Registered expected interaction GET /api/v1/shipment/XX-636446338738089968
+D, [2017-11-23T10:53:35.762919 #16420] DEBUG -- : {
+  "description": "a request for shipping order status",
+  "providerState": "there is a shipment number 'XX-636446338738089968' not delivered",
+  "request": {
+    "method": "get",
+    "path": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "/api/v1/shipment/XX-636446338738089968",
+        "matcher": {"json_class":"Regexp","o":0,"s":"/api/v1/shipment/\\S+"}
+      }
+    },
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "isDelivered": false
+    }
+  }
+}
+I, [2017-11-23T10:53:35.825456 #16420]  INFO -- : Received request GET /api/v1/shipment/XX-636446338738089968
+D, [2017-11-23T10:53:35.825456 #16420] DEBUG -- : {
+  "path": "/api/v1/shipment/XX-636446338738089968",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "Host": "localhost:9222",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-11-23T10:53:35.825456 #16420]  INFO -- : Found matching response for GET /api/v1/shipment/XX-636446338738089968
+D, [2017-11-23T10:53:35.825456 #16420] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "isDelivered": false
+  }
+}
+I, [2017-11-23T10:53:35.840455 #16420]  INFO -- : Verifying - interactions matched for example "<GetOrder_WithExistingOrder_ShouldReturnOrderState>d__7.MoveNext"
+I, [2017-11-23T10:53:35.852457 #16420]  INFO -- : Writing pact for ShipmentService to D:/Dev/Microservices Testing/NIP3/NIP3.Orders/NIP3.Orders.Test/Pacts/ordersservice-shipmentservice.json
+I, [2017-11-23T10:53:35.870467 #16420]  INFO -- : Cleared interactions for example "OrdersConsumerPact.Dispose ExceptionAggregator.Run <BeforeTestClassFinishedAsync>d__14.MoveNext"
